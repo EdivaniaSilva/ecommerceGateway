@@ -1,0 +1,121 @@
+[
+  {
+    "uri": "features/cenarios/enrollment.feature",
+    "id": "post-/enrollments---enrollments",
+    "keyword": "Funcionalidade",
+    "name": "POST /enrollments - Enrollments",
+    "description": "",
+    "line": 3,
+    "tags": [
+      {
+        "name": "@POST_enrollments",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "keyword": "Contexto",
+        "name": "Enrollment",
+        "description": "",
+        "line": 5,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que realizo uma requisição de Register",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/registerSteps.rb:5"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "\nexpected: 201\n     got: 422\n\n(compared using ==)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/registerSteps.rb:11:in `\"que realizo uma requisição de Register\"'\nfeatures/cenarios/enrollment.feature:7:in `Dado que realizo uma requisição de Register'",
+              "duration": 3213725700
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "que realizo uma requisição de Onbording",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/onboardingSteps.rb:5"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "que realizo uma requisição de Logon",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/logonSteps.rb:5"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "post-/enrollments---enrollments;enrollment-realizado-com-sucesso",
+        "keyword": "Cenario",
+        "name": "Enrollment realizado com sucesso",
+        "description": "",
+        "line": 14,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@POST_enrollments",
+            "line": 2
+          },
+          {
+            "name": "@Sucess_Flow",
+            "line": 13
+          }
+        ],
+        "comments": [
+          {
+            "value": "#SUCESS FLOW",
+            "line": 11
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "realizo uma requisição de Enrollment",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/enrollmentSteps.rb:20"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "status code retornado é 201",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/comunsSteps.rb:3"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "parametro \"accessToken\" exibido no response body",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/comunsSteps.rb:15"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
